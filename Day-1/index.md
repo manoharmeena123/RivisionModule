@@ -164,3 +164,104 @@ Note that this is a very basic example and doesn't handle things like routing or
 
 
 ## What is libuv?
+
+libuv is a multi-platform support library with a focus on asynchronous I/O. It was originally developed for Node.js to provide a consistent, cross-platform interface for I/O operations such as network sockets and file access.
+
+libuv abstracts the differences between operating systems and provides a single, consistent API for applications to use. It provides a number of features that make it well-suited for building high-performance, scalable network servers and other I/O-intensive applications.
+
+Some of the key features of libuv include:
+
+Asynchronous I/O: libuv provides a consistent interface for performing asynchronous I/O operations, such as reading and writing to network sockets, files, and other types of I/O resources.
+
+Event loop: libuv includes an event loop implementation that allows applications to perform I/O operations without blocking the main thread of execution. This allows applications to handle large numbers of concurrent connections efficiently.
+
+Cross-platform support: libuv supports multiple operating systems, including Linux, macOS, Windows, and various Unix-like systems.
+
+Thread pool: libuv includes a thread pool that can be used to perform computationally intensive tasks without blocking the event loop.
+
+Timers and idle handlers: libuv provides facilities for scheduling timers and idle handlers, which can be used to perform periodic tasks or to wait for some period of time before performing an action.
+
+`Conclusion :` Overall, libuv provides a powerful set of tools for building high-performance, scalable network applications that can run on a wide range of platforms. It is used by many popular projects, including Node.js, the Atom text editor, and the Julia programming language, among others.
+
+## What are the different phases involved in event loop?
+
+`the event loop is designed to handle asynchronous programming and ensure that code execution is efficient and non-blocking`.
+The event loop is a core component of many programming languages and frameworks, including JavaScript, Python, and Node.js. It is responsible for managing the execution of code and handling events and callbacks. The exact phases of the event loop can vary depending on the language and framework being used, but here is a general overview of the phases involved in a typical event loop:
+
+Polling for events: The event loop starts by polling for any events that are waiting to be processed, such as user input or network requests.
+
+Event queue: Any events that are detected during the polling phase are added to an event queue, which is a data structure that stores the events in the order they were received.
+
+Processing events: The event loop then processes each event in the queue one by one. This typically involves executing any associated callback functions or handlers.
+
+Timers and intervals: During event processing, the event loop also checks for any timers or intervals that are scheduled to run, and executes them if they are ready.
+
+I/O operations: If any I/O operations are required during event processing, such as reading or writing to a file, the event loop will delegate these tasks to separate threads or processes to avoid blocking the main thread.
+
+Yielding control: Once all the events in the queue have been processed and all timers and intervals have been executed, the event loop yields control back to the operating system to allow other tasks to run.
+
+Repeating the cycle: The event loop then goes back to the first phase and starts polling for events again, repeating the cycle indefinitely until the program is stopped or an error occurs.
+
+##  What are timers in Node.js?
+   # Timers in Node.
+   
+ Timers in Node.js are a core feature that allow you to schedule the execution of a function or code block at a specific time in the future or at recurring intervals. Timers are used extensively in Node.js applications for a variety of purposes, such as scheduling periodic data updates, triggering backups or cleanups, or delaying the execution of time-consuming operations.
+
+There are two types of timers in Node.js: setTimeout() and setInterval(). The setTimeout() function allows you to schedule a function to run once after a specified delay, while the setInterval() function allows you to schedule a function to run repeatedly at a specified interval.
+
+Here is an example of using set  
+
+setTimeout(() => {
+  console.log('This function will run after a 5 second delay.');
+}, 5000)
+
+
+setInterval(() => {
+  console.log('This function will run every 2 seconds.');
+}, 2000);
+
+`Note that timers are non-blocking, which means that while a timer is waiting to execute its associated function, the event loop can continue to process other events and tasks. However, if the event loop is blocked by a long-running operation, the timer may be delayed.`
+
+
+##  What is NVM? how do you use it?
+NVM stands for Node Version Manager, it's a command-line tool that allows you to easily switch between different versions of Node.js on your computer. It's useful if you're working on multiple projects that require different versions of Node.js, or if you need to test your application against different versions of Node.js.
+`That's a basic overview of how to use NVM. It's a powerful tool that can save you a lot of time and hassle when working with Node.js projects that require different versions of Node.js.`
+
+
+##  What is common.js? how is it different from es modules?
+CommonJS is a module specification for JavaScript that was originally developed for use in server-side applications, particularly in the Node.js runtime environment. CommonJS modules use a require() function to import other modules and an exports object to export functions, objects, or values from a module.
+`Overall, while CommonJS and ES Modules have some similarities, they are two different module systems with different syntax and semantics. ES Modules are becoming more widely adopted and are the recommended way of working with modules in modern JavaScript applications.`
+
+
+##  How does the crypto module work?
+he crypto module in Node.js provides a way to work with cryptographic functionality in JavaScript. It includes various cryptographic algorithms for creating secure hash functions, encrypting and decrypting data, and generating random numbers and strings.
+
+Here's a basic overview of how the crypto module works:
+1.Generating random numbers and strings: The crypto.randomBytes() method can be used to generate a buffer of cryptographically secure random bytes. This can be converted to a string or number for use in generating random keys or salts.
+2.Creating hash functions: The crypto.createHash() method can be used to create a hash object, which can then be used to hash data using various algorithms, such as SHA256 or MD5.
+3.Encrypting and decrypting data: The crypto.createCipher() and crypto.createDecipher() methods can be used to create cipher and decipher objects, which can then be used to encrypt and decrypt data using various algorithms, such as AES.
+
+`These are just some basic examples of how the crypto module works. There are many other methods and options available for working with cryptographic functions in Node.js. It's important to use these functions carefully and appropriately to ensure the security of your applications.`
+
+##  What are web sockets?
+
+WebSockets are a communication protocol that provides real-time, bidirectional communication between a client (such as a web browser) and a server. Unlike the traditional request-response model of HTTP, which requires the client to send a request to the server for each interaction, WebSockets allow the server to push data to the client at any time, without the need for the client to request it.
+
+WebSockets are especially useful for web applications that require real-time data updates, such as chat applications, online games, and stock tickers. With WebSockets, these applications can update data on the client side as soon as it becomes available on the server side, without the need for the client to repeatedly poll the server for updates.
+
+WebSockets use a persistent connection between the client and the server, which allows for faster and more efficient communication than the traditional HTTP request-response model. The protocol is implemented using the WebSocket API in web browsers and WebSocket server libraries on the server side.
+
+## What are microservices?
+Microservices are an architectural style in which a large application is broken down into small, independent services that can be developed, deployed, and scaled independently. Each microservice is focused on a specific business capability and can be developed and maintained by a small, cross-functional team.
+
+In a microservices architecture, each service communicates with other services through well-defined APIs, typically using lightweight protocols such as HTTP or message queues. This allows services to be developed and deployed independently, without requiring coordination with other teams or services.
+
+Microservices offer a number of benefits over traditional monolithic architectures, including:
+
+Scalability: Services can be scaled independently, allowing for better resource utilization and improved performance.
+Flexibility: Changes can be made to individual services without affecting the rest of the application, making it easier to introduce new features and respond to changing business requirements.
+Resilience: Services can be designed to handle failures and degraded performance, improving the overall reliability of the application.
+Technology diversity: Different services can be built using different technologies and programming languages, allowing teams to choose the best tool for the job.
+However, microservices also introduce additional complexity, such as the need for service discovery, load balancing, and fault tolerance. Effective management of microservices requires a robust infrastructure and well-defined processes for deployment, monitoring, and maintenance.
+
+##  Creating a CLI based app using Node.js and publish it
