@@ -76,3 +76,91 @@ Throughput can be affected by various factors, including the bandwidth of the co
 Throughput is important in many applications, such as video streaming, file transfer, online gaming, and cloud computing. A high throughput network is essential for these applications to function effectively and provide a smooth and seamless user experience.
 
 ## what is the difference between readFile and readFileSync?
+
+readFile and readFileSync are both functions in Node.js used for reading files, but they differ in their execution and behavior.
+
+ - `readFile` => readFile is an asynchronous function that reads the contents of a file and returns them via a callback function. It takes three arguments: the path to the file to be read, an optional encoding type (default is utf8), and a callback function that is called when the file has been read or when an error occurs. readFile does not block the execution of the rest of your program while the file is being read, which means that other operations can be performed while the file is being read.
+
+`Exapmle `
+        const fs = require('fs');
+
+      fs.readFile('file.txt', 'utf8', function (err, data) {
+         if (err) throw err;
+           console.log(data);
+       });
+
+
+`readFileSync`, on the other hand, is a synchronous function that reads the contents of a file and returns them as a string or a buffer. It takes two arguments: the path to the file to be read and an optional encoding type (default is utf8). readFileSync blocks the execution of the rest of your program until the file has been read, which means that other operations cannot be performed while the file is being read.     
+
+`Example`   
+                 const fs = require('fs');
+
+           try {
+                 const data = fs.readFileSync('file.txt', 'utf8');
+                 console.log(data);
+            } catch (err) {
+              console.error(err);
+            }
+
+##  How can you make a network request using http module? 
+
+To make a network request using the http module in Node.js, you can use the http.request() method. This method creates a new HTTP request object, sends it to the specified URL, and then returns a http.ClientRequest object that you can use to interact with the request.
+
+ `Example` const http = require('http');
+
+const options = {
+  hostname: 'www.example.com',
+  port: 80,
+  path: '/',
+  method: 'GET'
+};
+
+const req = http.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`);
+
+  res.on('data', d => {
+    process.stdout.write(d);
+  });
+});
+
+req.on('error', error => {
+  console.error(error);
+});
+
+req.end();
+
+
+In this example, we first create an options object that specifies the details of the request, such as the hostname, port, path, and HTTP method. We then use http.request() to create a new request object, passing in the options object and a callback function that will be called when a response is received.
+
+Inside the callback function, we log the response status code and use res.on('data', ...) to listen for data events on the response object. When data is received, we write it to the standard output stream.
+
+Finally, we use the req.on('error', ...) method to listen for errors that may occur during the request, and then call req.end() to signal the end of the request.
+
+## How to create a web server without express?,
+
+  `Example`       const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World!');
+});
+
+server.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+
+In the code above, we first require the built-in Node.js http module, which provides the basic functionality needed to create a web server.
+
+We then create a new server instance using the http.createServer() method, which takes a callback function that is executed for every incoming HTTP request. This function takes two arguments: the req (request) object, which contains information about the incoming request, and the res (response) object, which is used to send the response back to the client.
+
+In this example, we simply set the response status code to 200, set the content type header to text/plain, and send the string "Hello World!" as the response body using the res.end() method.
+
+Finally, we tell the server to listen on port 8000 using the server.listen() method, and log a message to the console to indicate that the server is running.
+
+Note that this is a very basic example and doesn't handle things like routing or middleware. For more complex web applications, you may want to use a framework like Express, which provides additional features and makes it easier to handle more complex use cases.
+
+
+
+## What is libuv?
