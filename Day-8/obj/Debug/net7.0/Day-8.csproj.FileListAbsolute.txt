@@ -1,0 +1,15 @@
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.csproj.AssemblyReference.cache
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.AssemblyInfoInputs.cache
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.AssemblyInfo.cs
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.csproj.CoreCompileInputs.cache
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\bin\Debug\net7.0\Day-8.exe
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\bin\Debug\net7.0\Day-8.deps.json
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\bin\Debug\net7.0\Day-8.runtimeconfig.json
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\bin\Debug\net7.0\Day-8.dll
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\bin\Debug\net7.0\Day-8.pdb
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.dll
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\refint\Day-8.dll
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.pdb
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\Day-8.genruntimeconfig.cache
+C:\Users\BIIT\OneDrive\Desktop\RivisionModule\Day-8\obj\Debug\net7.0\ref\Day-8.dll
