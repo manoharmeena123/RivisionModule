@@ -1,5 +1,4 @@
 // find  prime numberat nth position
-
 // function isPrime(n) {
 //   let arr = [];
 //   for (let i = 1; i < 100; i++) {
@@ -13,10 +12,8 @@
 //       arr.push(i);
 //     }
 //   }
-
 //   console.log(arr[n - 1]);
 // }
-
 // isPrime(17);
 
 
@@ -24,7 +21,6 @@
 //          [6,5,7,44,55,66,52],
 //           [7,8,61]
 //         ];
-
 // function isMax(){
 //     let arr ;
 //     let max = -Infinity;
@@ -34,8 +30,6 @@
 //           max = mat[i].length
 //           arr = mat[i].length
 //         }
-
-
 //     }
 //     let m = -Infinity;
 //     for( let i=0; i<arr.length; i++){
@@ -46,24 +40,4 @@
 //     console.log(m)
 // }
 // isMax()
-
-//write a program for finding prime number
-
-// function isPrime(n){
-    
-// let count =0;
-// for(let i=1; i<=n; i++){
-//     if(n%i== 0){
-//         count ++
-//     }
-// }
-// if(count==2){
-//     console.log("Prime")
-// }else{
-// console.log("-1")
-// }
-// }
-
-// isPrime(7)
-//write a program for finding prime number 
 
